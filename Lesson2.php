@@ -67,10 +67,10 @@ function multiply ($a, $b) {
 function divide ($a, $b) {
     return $a / $b;
 }
-echo 'Произведение чисел: ' .multiply(4,8).'<br>';
-echo 'Сумма чисел: ' .sum(7,4).'<br>';
-echo 'Разность чисел: ' .different(15,3).'<br>';
-echo 'Деление чисел: ' .divide(6,3).'<br>';
+echo 'Произведение чисел: ' .multiply($a,$b).'<br>';
+echo 'Сумма чисел: ' .sum($a,$b).'<br>';
+echo 'Разность чисел: ' .different($a,$b).'<br>';
+echo 'Деление чисел: ' .divide($a,$b).'<br>';
 
 ?>
 
@@ -82,23 +82,31 @@ function mathOperation($arg1,$arg2,$operation)
 {
     switch ($operation) {
         case 'sum':
-            return $arg1 + $arg2;
+           echo sum($arg1,$arg2);
+           break;
 
         case 'different':
-            return $arg1 - $arg2;
+            echo different($arg1,$arg2);
+            break;
 
         case 'multiply':
-            return $arg1 * $arg2;
+            echo multiply($arg1,$arg2);
+            break;
 
         case 'divide':
-            return $arg1 / $arg2;
+            echo divide($arg1,$arg2);
+            break;
 
         default:
             return "Такая операция невозможна!";
     }
 }
 
-echo mathOperation(6,3,'divide');
+echo mathOperation($a,$b,'divide');
+echo mathOperation($a,$b,'different');
+echo mathOperation($a,$b,'sum');
+echo mathOperation($a,$b,'multiply');
+
 
 ?>
 <!--Урок 2. Задание 5.-->
