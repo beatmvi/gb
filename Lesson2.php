@@ -82,16 +82,20 @@ function mathOperation($arg1,$arg2,$operation)
 {
     switch ($operation) {
         case 'sum':
-            return $arg1 + $arg2;
+           echo sum($arg1,$arg2);
+           break;
 
         case 'different':
-            return $arg1 - $arg2;
+            echo different($arg1,$arg2);
+            break;
 
         case 'multiply':
-            return $arg1 * $arg2;
+            echo multiply($arg1,$arg2);
+            break;
 
         case 'divide':
-            return $arg1 / $arg2;
+            echo divide($arg1,$arg2);
+            break;
 
         default:
             return "Такая операция невозможна!";
