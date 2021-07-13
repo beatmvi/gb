@@ -3,5 +3,5 @@ return [
     'host' => 'localhost',
     'user' => 'root',
     'password' => 'root',
-    'db' => 'gallery'
+    'db' => 'catalog'
 ];
